@@ -1,3 +1,4 @@
+// App.js
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
@@ -10,7 +11,7 @@ import Contact from './components/Contact';
 function App() {
   return (
     <Router>
-      <Navbar />
+      <Navbar /> {/* Navbar already includes the Sidebar */}
       <main>
         <Routes>
           <Route path="/" element={<Home />} />

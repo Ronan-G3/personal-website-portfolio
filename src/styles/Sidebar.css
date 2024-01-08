@@ -1,0 +1,17 @@
+/* Sidebar.css */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px; /* Start off the screen */
+    width: 250px;
+    height: 100%;
+    background: #fff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s ease;
+    /* Rest of your styling */
+  }
+  
+  .sidebar.open {
+    right: 0; /* Bring onto the screen */
+  }
+  

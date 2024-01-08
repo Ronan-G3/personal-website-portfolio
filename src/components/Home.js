@@ -4,10 +4,11 @@ import '../styles/Home.css';
 
 function Home() {
   const el = useRef(null);
+  const typed = useRef(null);
 
   useEffect(() => {
-    const typed = new Typed(el.current, {
-      strings: ["Software Developer", "Front-end Developer", "Back-end Developer", "UI/UX Designer", "Graphic Designer", "Full Stack Developer"], // Add all your roles here
+    typed.current = new Typed(el.current, {
+      strings: ["Software Developer", "Front-end Developer", "Back-end Developer", "UI/UX Designer", "Graphic Designer", "Full Stack Developer"],
       startDelay: 300,
       typeSpeed: 50,
       backSpeed: 50,
@@ -17,14 +18,18 @@ function Home() {
     });
 
     return () => {
-      typed.destroy();
+      typed.current.destroy();
     };
   }, []);
 
   return (
-    <div className="home">
-      <h1>Welcome to Ronan Glennon's Portfolio</h1>
-      <div ref={el}></div>
+    <div className="home-section">
+      <div className="home-content">
+        <div className="home-text">
+            <h1>Hello, I'm Ronan Glennon</h1>
+            <h2>I am a <span ref={el}></span></h2>
+        </div>
+      </div>
     </div>
   );
 }

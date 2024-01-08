@@ -1,4 +1,56 @@
-.home {
-    text-align: center;
-}
+* {
+    /* border: 1px solid red; Temporarily see the bounds of all elements */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
+.home-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Remove align-items: center; from here */
+    text-align: left; /* This will set the default text alignment to left */
+    min-height: 100vh;
+    background-image: url('/public/home-background.png');
+   background-size: 95vw 95vh;
+    overflow: hidden;
+    background-position: top center;
+    background-repeat: no-repeat;
+    scroll-snap-align: start;
+  }
+  
+  .home-content {
+    display: flex; /* Make this a flex container */
+    flex-direction: column; /* Stack children vertically */
+    align-items: flex-start; /* Align children to the start (left) */
+    max-width: 1000px;
+    width: 100%; /* Ensure it takes full width */
+    margin: 0 auto; /* This will keep it centered */
+    padding: 0 20px; /* Adjust padding as needed */
+  }
+  
+  .home-text {
+    max-width: 600px; /* Set a max-width for the text block */
+    align-self: flex-start; /* Align the text block to the start (left) */
+    /* No need for padding-left as it is already aligned to the left */
+  }
+
+  .home-content h1,
+  .home-content h2 {
+    color: #000;
+    font-family: 'Cool-font', sans-serif; 
+    margin: 0;
+  }
+  /* App.css */
+html {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    /* other styles */
+  }
+  
+  body {
+    margin: 0;
+    /* other styles */
+  }
+  
