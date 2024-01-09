@@ -13,7 +13,17 @@
     z-index: 1000; /* Ensures the navbar is above other content */
   }
   
-  
+  .logo {
+    font-size: 15px; /* Set the font size as desired */
+    color: #fff; /* Set the color */
+    text-transform: uppercase; /* Optional: uppercase styling */
+    font-weight: bold; /* Optional: make it bold */
+    letter-spacing: 1px; /* Optional: space out the letters slightly */
+    font-family: 'Helvetica', sans-serif; /* Set the font family as desired */
+    margin-right: 20px; /* Adjust the spacing from the right side */
+    text-decoration: none; /* Remove underline if it's an anchor tag */
+    /* Add other styles as needed */
+}
   .navbar a {
     color: #000; /* Or any color that matches your design */
     text-decoration: none;
@@ -21,19 +31,23 @@
   
   /* Styles for the hamburger menu */
   .hamburger-menu {
-    display: none; /* Hidden by default, will be displayed on smaller screens */
     cursor: pointer;
   }
   
   /* Show the hamburger menu on smaller screens */
   @media (max-width: 768px) {
     .hamburger-menu {
-      display: block;
+      display: pointer;
     }
     
     /* You might want to hide other elements in the navbar when on smaller screens */
     .navbar a:not(.logo) {
       display: none;
+    }
+
+    .logo {
+        font-size: 12px; /* Smaller font size on smaller screens */
+        margin-right: 10px; /* Less spacing on the right on smaller screens */
     }
   }
   

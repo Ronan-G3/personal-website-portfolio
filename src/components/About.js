@@ -1,13 +1,17 @@
-// This is the basic structure for each component:
 import React from 'react';
+import '../styles/About.css'; // Make sure to create this CSS file
 
-function Home() {
+function About() {
   return (
-    <div>
-      <h1>About</h1>
-      {/* Content goes here */}
+    <div className="about-section">
+      <div className="about-content">
+        <div className="about-text">
+            <h1>About Me</h1>
+            {/* Content goes here */}
+        </div>
+      </div>
     </div>
   );
 }
 
-export default Home;
+export default About;

@@ -9,11 +9,10 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* Remove align-items: center; from here */
-    text-align: left; /* This will set the default text alignment to left */
+    text-align: left; 
     min-height: 100vh;
     background-image: url('/public/home-background.png');
-   background-size: 95vw 95vh;
+    background-size: 95vw 95vh;
     overflow: hidden;
     background-position: top center;
     background-repeat: no-repeat;
@@ -54,3 +53,10 @@ html {
     /* other styles */
   }
   
+  @media (max-width: 768px) {
+    .home-section {
+        background-size: 240% auto;
+        background-position: -290px center; /* Align the background to the top */
+      /* other styles if necessary */
+    }
+  }

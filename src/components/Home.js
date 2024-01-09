@@ -8,7 +8,7 @@ function Home() {
 
   useEffect(() => {
     typed.current = new Typed(el.current, {
-      strings: ["Software Developer", "Front-end Developer", "Back-end Developer", "UI/UX Designer", "Graphic Designer", "Full Stack Developer"],
+      strings: ["Software Developer", "Front-end Developer", "Back-end Developer", "UI/UX Designer", "Graphic Designer", "Full Stack Developer", "Musician"],
       startDelay: 300,
       typeSpeed: 50,
       backSpeed: 50,
@@ -26,7 +26,7 @@ function Home() {
     <div className="home-section">
       <div className="home-content">
         <div className="home-text">
-            <h1>Hello, I'm Ronan Glennon</h1>
+            <h1>Hello, I'm Ronan!</h1>
             <h2>I am a <span ref={el}></span></h2>
         </div>
       </div>

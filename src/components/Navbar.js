@@ -1,8 +1,9 @@
 // Navbar.js
 import React, { useState } from 'react';
-import HamburgerMenu from './HamburgerMenu';
-import Sidebar from './Sidebar'; // Import Sidebar
-import '../styles/Navbar.css'; // Update with the correct path to your CSS file
+import Sidebar from './Sidebar'; // Make sure this component exists and is exported correctly.
+import HamburgerMenu from './HamburgerMenu'; // Make sure this component exists and is exported correctly.
+import '../styles/Navbar.css';
+import '../styles/HamburgerMenu.css'; // Ensure the CSS file exists and path is correct.
 
 function Navbar() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -15,9 +16,9 @@ function Navbar() {
     <>
       <nav className="navbar">
         <a href="/" className="logo">Ronan Glennon</a>
-        <HamburgerMenu toggleSidebar={toggleSidebar} /> {/* Pass toggleSidebar as a prop */}
+        <HamburgerMenu toggleSidebar={toggleSidebar} />
       </nav>
-      <Sidebar isOpen={isSidebarOpen} /> {/* Use the Sidebar here */}
+      <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
     </>
   );
 }
